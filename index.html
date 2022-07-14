@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Climate Change Concentration</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome!</h1>
+    </header>
+    <div id="gameContainer">
+        <div id="dropZone">
+            <div id="column1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <p>Column 1</p>
+            </div>
+            <div id="column2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <p>Column 2</p>
+            </div>
+            <div id="column3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <p>Column 3</p>
+            </div>
+            <div id="column4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <p>Column 4</p>
+            </div>
+            <div id="column5" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <p>Column 5</p>
+            </div>
+            <div id="column6" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <p>Column 6</p>
+            </div>
+            <div id="column7" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <p>Column 7</p>
+            </div>
+        </div>
+
+        <div id="cards" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="card1" class="card" draggable="true" ondragstart="drag(event)" width="300">
+                card 1
+            </div>
+    
+            <div id="card2" class="card" draggable="true" ondragstart="drag(event)" width="300">
+                card 2
+            </div>
+    
+            <div id="card3" class="card" draggable="true" ondragstart="drag(event)" width="300">
+                card 3
+            </div>
+    
+            <div id="card4" class="card" draggable="true" ondragstart="drag(event)" width="300">
+                card 4
+            </div>
+        </div>    
+    </div>
+
+    <script src="./index.js" async defer></script>
+</body>
+
+</html>

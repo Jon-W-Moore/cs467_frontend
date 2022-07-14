@@ -1,0 +1,44 @@
+h1 {
+    text-align: center;
+}
+
+#gameContainer{
+    display: flex;
+}
+
+.card {
+    height: 100px;
+    width: 100px;
+    background-color: lightblue;
+    margin: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+#dropZone {
+    display: grid;
+    grid-template-columns: fit-content(calc(1/7*100%)) fit-content(calc(1/7*100%)) fit-content(calc(1/7*100%)) fit-content(calc(1/7*100%)) fit-content(calc(1/7*100%)) fit-content(calc(1/7*100%)) fit-content(calc(1/7*100%));
+    /* grid-template-columns:  1fr fit-content(20%); */
+    /* grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;  */
+    /* grid-template-columns: auto auto auto auto auto auto auto; */
+    background-color: #2196F3;
+    padding: 5px;
+    height: 100%;
+    grid-gap: 5px;
+    max-width: 1080px;
+    /* margin: auto; */
+}
+
+#column1,
+#column2,
+#column3,
+#column4,
+#column5,
+#column6,
+#column7 {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    height: 600px;
+    width: 150px
+}
