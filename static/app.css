@@ -330,7 +330,7 @@ input[type=button].pause {
 }
 
 .question_buttons_container {
-    width: 94vw;
+    width: 96vw;
     height: 6vw;
     display: inline-block;
 }
@@ -348,7 +348,7 @@ input[type=button].question_button {
     color: #343f3f;
     text-align: center;
     white-space: normal;
-    word-wrap: break-word;
+    padding: .8vw;
 }
 
 input[type=button].question_button:hover {
