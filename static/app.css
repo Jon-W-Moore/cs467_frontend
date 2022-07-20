@@ -10,14 +10,6 @@ body {
     text-align: center;
 }
 
-header {
-    /* position: absolute;
-    top: 0;
-    left: 0; */
-    /* width: 100%;
-    display: block; */
-}
-
 .title {
     color: white;
     font-size: 64px;
@@ -129,4 +121,35 @@ footer {
     text-align: center;
     margin: 0px;
     height: fit-content;
+}
+
+.menu_bar {
+    /* display: inline-block; */
+    width: 300px;
+    height: 100vh;
+    background-color: #f4f4f4;
+    border-right: 4px solid #343f3f;
+}
+
+h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 20px;
+    text-align: left;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    text-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+    color: #343f3f;
+}
+
+input[type=button] {
+    background: #9cc2c2;
+    color: white;
+    border: 4px solid #343f3f;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 250px;
+    height: 50px;
+    margin: 15px;
 }
