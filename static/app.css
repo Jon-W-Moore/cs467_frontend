@@ -115,13 +115,18 @@ footer {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    line-height: 12px;
+    line-height: 20px;
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
     margin: 0px;
-    height: max-content;
+    height: 20px;
+    margin-block-start: 0;
+}
+
+p {
+    margin-block-start: 0;
 }
 
 .menu_bar {
@@ -136,9 +141,9 @@ footer {
 h2 {
     margin-block-start: 0;
     margin-block-end: 0;
-    padding: 20px;
+    padding: .8vw;
     text-align: left;
-    font-size: 32px;
+    font-size: 1.5vw;
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
     text-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -150,7 +155,7 @@ h2.center {
     margin-block-end: 0;
     padding: 20px;
     text-align: left;
-    font-size: 32px;
+    font-size: 2vw;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     text-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -162,10 +167,10 @@ input[type=button] {
     color: white;
     border: 4px solid #343f3f;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    border-radius: 1vw;
     width: 250px;
     height: 50px;
-    margin: 15px;
+    margin: .6vw;
 }
 
 input[type=button]:hover {
@@ -184,7 +189,7 @@ input[type=button]:active {
     background-color: #fbbd05bf;
     border: 4px solid #343f3f;
     box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    border-radius: 1vw;
     align-self: center;
     margin-top: 75px;
 }
@@ -218,7 +223,8 @@ h3 {
 .game_header {
     display: block;
     width: 100%;
-    height: 70px;
+    height: 3vw;
+    font-size: 2vw;
     background-color: #f4f4f4;
     border-bottom: 4px solid #343f3f;
     box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
@@ -226,31 +232,33 @@ h3 {
 
 .card_image {
     float: left;
-    width: 1200px;
-    height: 680px;
+    /* display: inline-block; */
+    width: calc((62vw) - 8px);
+    height: 35vw;
     /* background-color: #f4f4f4; */
     border: 4px solid #343f3f;
     box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    margin: 25px;
+    border-radius: 1vw;
+    margin: 2vw;
 }
 
 .score_card {
-    float: right;
-    width: 600px;
-    height: 150px;
+    /* float: right; */
+    display: block;
+    width: 30vw;
+    height: 7vw;
     background-color: #f4f4f4;
     border: 4px solid #343f3f;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    border-radius: 1vw;
     text-align: center;
 }
 
 .game_control_panel {
-    width: 600px;
-    height: 680px;
+    width: 30vw;
+    height: 35vw;
     float: right;
-    margin: 25px;
+    margin: 2vw;
 }
 
 input[type=button].game_button {
@@ -258,10 +266,11 @@ input[type=button].game_button {
     color: #343f3f;
     border: 4px solid #343f3f;
     box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    width: 150px;
-    height: 100px;
-    margin: 35px;
+    border-radius: 1vw;
+    width: 9vw;
+    height: 6vw;
+    margin: 2vw;
+    font-size: 1.5vw;
 }
 
 input[type=button].game_button:hover {
@@ -274,24 +283,24 @@ input[type=button].game_button:active {
 }
 
 .progress_card {
-    float: right;
-    width: 600px;
-    height: 350px;
+    /* float: right; */
+    width: 30vw;
+    height: 17.5vw;
     background-color: #f4f4f4;
     border: 4px solid #343f3f;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    border-radius: 1vw;
     text-align: center;
 }
 
 input[type=button].pause {
     float: left;
-    width: 100px;
-    height: 100px;
-    font-size: 48px;
+    width: 5vw;
+    height: 5vw;
+    font-size: 3vw;
     font-weight: 800;
-    margin-left: 50px;
-    margin-top: 50px;
+    margin-left: 2.5vw;
+    margin-top: 2.5vw;
 }
 
 .timer_card {
@@ -299,12 +308,12 @@ input[type=button].pause {
     color: white;
     border: 4px solid #343f3f;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    width: 342px;
-    height: 92px;
+    border-radius: 1vw;
+    width: calc((17.5vw) - 8px);
+    height: calc((5vw) - 8px);
     float: right;
-    margin-top: 50px;
-    margin-right: 50px;
+    margin-top: 2.5vw;
+    margin-right: 2.5vw;
 }
 
 .fraction_card {
@@ -312,10 +321,36 @@ input[type=button].pause {
     color: white;
     border: 4px solid #343f3f;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    width: 492px;
-    height: 92px;
-    float: right;
-    margin-top: 35px;
-    margin-right: 50px;
+    border-radius: 1vw;
+    width: calc((25vw) - 8px);
+    height: calc((5vw) - 8px);
+    float: left;
+    margin-top: 1.55vw;
+    margin-left: 2.5vw;
+}
+
+.question_buttons_container {
+    width: 94vw;
+    height: 6vw;
+    display: inline-block;
+}
+
+input[type=button].question_button {
+    display: inline-block;
+    width: 11vw;
+    height: 6vw;
+    background-color: grey;
+    margin-top: 0;
+    margin-inline: 1vw;
+    background-color: #f4f4f4;
+    font-size: 1vw;
+    line-height: 1.2vw;
+    color: #343f3f;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+input[type=button].question_button:hover {
+    background-color: #dfdfdf
 }
