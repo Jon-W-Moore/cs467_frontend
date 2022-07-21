@@ -20,8 +20,29 @@ body {
     margin-block-end: .2em;
 }
 
+footer {
+    background-color: #343f3f;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    height: 20px;
+    margin-block-start: 0;
+}
 
-/************** login page ***************/
+
+/*****************************************************************************************/
+
+
+/*                                      LOGIN PAGE                                       */
+
+
+/*****************************************************************************************/
 
 .center_card {
     display: inline-block;
@@ -101,7 +122,7 @@ input[type=submit]:active {
     font-weight: 400;
     font-size: 1.2vmax;
     line-height: 1.4vmax;
-    z color: #343f3f;
+    color: #343f3f;
     text-align: center;
 }
 
@@ -110,25 +131,13 @@ a {
 }
 
 
-/* footer */
-
-footer {
-    background-color: #343f3f;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    line-height: 20px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    margin: 0px;
-    height: 20px;
-    margin-block-start: 0;
-}
+/*****************************************************************************************/
 
 
-/****************** dashboard *******************/
+/*                                       DASHBOARD                                       */
+
+
+/*****************************************************************************************/
 
 p {
     margin-block-start: 0;
@@ -236,7 +245,13 @@ h3 {
 }
 
 
-/********************** game page ***********************/
+/*****************************************************************************************/
+
+
+/*                                       GAME PAGE                                       */
+
+
+/*****************************************************************************************/
 
 .game_header {
     display: block;
@@ -311,6 +326,9 @@ input[type=button].game_button:active {
     text-align: center;
 }
 
+
+/* ^^^ TO BE REMOVED ^^^ */
+
 input[type=button].pause {
     float: left;
     width: 5vw;
@@ -372,3 +390,12 @@ input[type=button].question_button {
 input[type=button].question_button:hover {
     background-color: #dfdfdf
 }
+
+
+/*****************************************************************************************/
+
+
+/*                                       PROFILE                                         */
+
+
+/*****************************************************************************************/
