@@ -125,6 +125,9 @@ footer {
     margin-block-start: 0;
 }
 
+
+/****************** dashboard *******************/
+
 p {
     margin-block-start: 0;
 }
@@ -132,7 +135,7 @@ p {
 .menu_bar {
     display: block;
     float: left;
-    width: 300px;
+    width: 16vw;
     height: 100vh;
     background-color: #f4f4f4;
     border-right: 4px solid #343f3f;
@@ -153,9 +156,9 @@ h2 {
 h2.center {
     margin-block-start: 0;
     margin-block-end: 0;
-    padding: 20px;
+    padding: .8vw;
     text-align: left;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     text-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -168,9 +171,10 @@ input[type=button] {
     border: 4px solid #343f3f;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 1vw;
-    width: 250px;
-    height: 50px;
+    width: 14vw;
+    height: 4vw;
     margin: .6vw;
+    font-size: 1.5vw;
 }
 
 input[type=button]:hover {
@@ -182,33 +186,45 @@ input[type=button]:active {
     transform: translateY(2px) translateX(-1px);
 }
 
-.newgame_card {
+.learn_game_card {
     display: inline-block;
-    width: 500px;
-    height: 700px;
+    width: 26vw;
+    height: 35vw;
+    background-color: #DDDCDC;
+    border: 4px solid #343f3f;
+    box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1vw;
+    margin-top: 3vw;
+    margin-inline: 7vw;
+}
+
+.review_game_card {
+    display: inline-block;
+    width: 26vw;
+    height: 35vw;
     background-color: #fbbd05bf;
     border: 4px solid #343f3f;
     box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
     border-radius: 1vw;
-    align-self: center;
-    margin-top: 75px;
+    margin-top: 3vw;
+    margin-inline: 7vw;
 }
 
 .game_rules {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.2vw;
+    line-height: 1.4vw;
     color: #343f3f;
     text-align: center;
-    margin-inline: 50px;
+    margin-inline: 1vw;
     ;
 }
 
 h3 {
     text-align: center;
-    font-size: 64px;
-    font-weight: 200;
+    font-size: 3vw;
+    font-weight: 300;
     margin-block-start: 0;
     margin-inline-end: 0;
     font-family: Arial, Helvetica, sans-serif;
