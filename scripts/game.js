@@ -28,13 +28,18 @@ async function getData(intervalId) {
     let current_question = document.body.dataset.current_question
     setNextQuestion(current_question, questions, url)
 
+    document.getElementById("skip").onclick = function () {
+        let nextQuestion = parseInt(document.body.dataset.current_question) + 1
+        document.body.dataset.current_question = nextQuestion
+        setNextQuestion(nextQuestion, questions, url)
+    }
     // load questions from server
     let questionContainer = document.getElementById("question_container")
     for (let i = 0; i < answers.length; i++) {
         let newEl = document.createElement("input")
         newEl.type = "button"
         newEl.className = "question_button"
-        newEl.onclick = function(event) {
+        newEl.onclick = function (event) {
             checkAnswer(event, questions, url, intervalId)
         }
         newEl.value = answers[i]
@@ -45,18 +50,18 @@ async function getData(intervalId) {
 
 function checkAnswer(e, questions, url, intervalId) {
     let id = e.target.id.split("-")[1]
-    if (id === document.getElementById("card_image").dataset.answer_id ) {
+    if (id === document.getElementById("card_image").dataset.answer_id) {
         document.getElementById(`answer-${id}`).style.backgroundColor = 'green'
         setTimeout(() => { document.getElementById(`answer-${id}`).style.backgroundColor = 'white'; }, 500);
-        
+
         // increase the score by ten points 
-        document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML)+10
+        document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) + 10
     } else {
         document.getElementById(`answer-${id}`).style.backgroundColor = 'red'
         setTimeout(() => { document.getElementById(`answer-${id}`).style.backgroundColor = 'white'; }, 500);
     }
 
-    document.body.dataset.current_question ++
+    document.body.dataset.current_question++
     let currentQuestion = document.body.dataset.current_question
 
     if (questions.length === parseInt(currentQuestion)) {
