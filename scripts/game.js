@@ -12,9 +12,13 @@ window.addEventListener("load", function () {
 });
 
 async function getData() {
-    let response = await fetch("http://localhost:3000/questions.json");
+    let url = "http://127.0.0.1:5000/"
+    let response = await fetch(`${url}/test1`);
     let data = await response.json()
-    let firstQuestion = data[0]
-    document.getElementById("card_image").src = `../imgs/${firstQuestion.img}`
-    document.getElementById("question_number").innerText = `1 out of ${data.length}`
+    let answers = data.answers
+    let questions = data.questions
+
+    let firstQuestion = questions[0]
+    document.getElementById("card_image").src = `${url}/${firstQuestion.image}`
+    document.getElementById("question_number").innerText = `1 out of ${questions.length}`
 }
