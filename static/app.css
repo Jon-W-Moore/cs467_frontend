@@ -314,11 +314,27 @@ input[type=button].pause {
     border: 4px solid #343f3f;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 1vw;
-    width: calc((17.5vw) - 8px);
+    width: calc((25vw) - 8px);
     height: calc((5vw) - 8px);
     float: right;
     margin-top: 2.5vw;
     margin-right: 2.5vw;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.time_info {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+#timer {
+    margin-left: 1vw;
 }
 
 .fraction_card {
@@ -332,6 +348,11 @@ input[type=button].pause {
     float: left;
     margin-top: 1.55vw;
     margin-left: 2.5vw;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .question_buttons_container {
