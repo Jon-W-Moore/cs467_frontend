@@ -17,6 +17,7 @@
     <div class="game_control_panel">
         <div class="score_card">
             <h2 class="center">Score</h2>
+            <p id="score">00</p>
         </div>
         <input type="button" class="game_button" id="info" name="info" value="INFO">
         <input type="button" class="game_button" id="skip" name="skip" value="SKIP">
@@ -31,21 +32,7 @@
             </div>
         </div>
     </div>
-    <div class="question_buttons_container">
-        <!-- need to replace button value with variables so questions can be edited -->
-        <input type="button" class="question_button" id="question_1" name="question_1" value="The Earth IS Warming!">
-        <input type="button" class="question_button" id="question_2" name="question_2"
-            value="Greenhouse Gases Warm any Planet’s Atmosphere!">
-        <input type="button" class="question_button" id="question_3" name="question_3" value="It’s Not the Sun!">
-        <input type="button" class="question_button" id="question_4" name="question_4" value="It’s Not Volcanos!">
-        <input type="button" class="question_button" id="question_5" name="question_5"
-            value="It’s Not Natural Variation!">
-        <input type="button" class="question_button" id="question_6" name="question_6" value="It IS Greenhouse Gases!">
-        <input type="button" class="question_button" id="question_7" name="question_7"
-            value="Humans Account for the Rising Greenhouse Gases!">
-        <input type="button" class="question_button" id="question_8" name="question_8"
-            value="Planetary Warming Impacts Humans!">
-    </div>
+    <div class="question_buttons_container" id="question_container"></div>
 
     <footer>
         <p>© 2022 || Chambers, Moore, Ratigan</p>
