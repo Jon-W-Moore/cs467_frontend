@@ -12,7 +12,7 @@ body {
 
 .title {
     color: white;
-    font-size: 64px;
+    font-size: 4vmax;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     text-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -25,14 +25,14 @@ body {
 
 .center_card {
     display: inline-block;
-    width: 500px;
-    height: 500px;
+    width: 25vmax;
+    height: 25vmax;
     background-color: #f4f4f4;
     border: 4px solid #343f3f;
     box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    border-radius: 1vmax;
     align-self: center;
-    margin-top: 75px
+    margin-top: 5vmax;
 }
 
 
@@ -49,8 +49,8 @@ input {
     /* margin: 10px; */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.2vmax;
+    line-height: 1.4vmax;
     color: #343f3f;
 }
 
@@ -58,17 +58,18 @@ input[type=text] {
     background: #FFFFFF;
     border: 2px solid #c4c4c4;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    width: 350px;
-    height: 50px;
-    text-indent: 15px;
+    border-radius: .75vmax;
+    width: 18vmax;
+    height: 3vmax;
+    text-indent: .75vmax;
+    margin: 1vmax;
 }
 
 ::placeholder {
-    font-family: SF Pro Display;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.2vmax;
+    line-height: 1.4vmax;
     color: #c4c4c4;
 }
 
@@ -80,9 +81,10 @@ input[type=submit] {
     color: white;
     border: 3px solid #343f3f;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    width: 359px;
-    height: 56px;
+    border-radius: .75vmax;
+    width: 18vmax;
+    height: 3vmax;
+    margin: 1vmax;
 }
 
 input[type=submit]:hover {
@@ -97,9 +99,9 @@ input[type=submit]:active {
 .reg_link {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    color: #343f3f;
+    font-size: 1.2vmax;
+    line-height: 1.4vmax;
+    z color: #343f3f;
     text-align: center;
 }
 
@@ -194,8 +196,8 @@ input[type=button]:active {
     border: 4px solid #343f3f;
     box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
     border-radius: 1vw;
-    margin-top: 3vw;
-    margin-inline: 7vw;
+    margin-top: 4vw;
+    margin-inline: 5vw;
 }
 
 .review_game_card {
@@ -206,8 +208,8 @@ input[type=button]:active {
     border: 4px solid #343f3f;
     box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
     border-radius: 1vw;
-    margin-top: 3vw;
-    margin-inline: 7vw;
+    margin-top: 4vw;
+    margin-inline: 5vw;
 }
 
 .game_rules {
