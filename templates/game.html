@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Mode</title>
-    <link rel="stylesheet" type="text/css" href="/static/app.css">
+    <link rel="stylesheet" type="text/css" href="../static/app.css">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
             <!-- remove the pause button -->
             <input type="button" class="pause" id="pause" name="pause" value="ll">
             <div class="timer_card">
-                Time 0:37
+                Time <span id="timer">0:00</span>
             </div>
             <div class="fraction_card">
                 1 out of 42
@@ -35,18 +35,21 @@
     </div>
     <div class="question_buttons_container">
         <!-- need to replace button value with variables so questions can be edited -->
-        <input type="button" class="question_button" id="info" name="info" value="How do we know if the globe is warming?">
-        <input type="button" class="question_button" id="info" name="info" value="How do we know GH gases warm air?">
-        <input type="button" class="question_button" id="info" name="info" value="How do we know the warming is not from the Sun?">
-        <input type="button" class="question_button" id="info" name="info" value="How do we know if the CO2 is not from volcanos?">
-        <input type="button" class="question_button" id="info" name="info" value="How do we know CO2 is from humans?">
-        <input type="button" class="question_button" id="info" name="info" value="Is the climate change just Natural Variability?">
-        <input type="button" class="question_button" id="info" name="info" value="Why does it matter if temperatures are changing?">
+        <input type="button" class="question_button" id="info" name="info" value="Question">
+        <input type="button" class="question_button" id="info" name="info" value="Question">
+        <input type="button" class="question_button" id="info" name="info" value="Question">
+        <input type="button" class="question_button" id="info" name="info" value="Question">
+        <input type="button" class="question_button" id="info" name="info" value="Question">
+        <input type="button" class="question_button" id="info" name="info" value="Question">
+        <input type="button" class="question_button" id="info" name="info" value="Question">
+        <input type="button" class="question_button" id="info" name="info" value="Question">
     </div>
 
     <footer>
         <p>© 2022 || Chambers, Moore, Ratigan</p>
     </footer>
+
 </body>
+<script src="../scripts/game.js"></script>
 
 </html>
