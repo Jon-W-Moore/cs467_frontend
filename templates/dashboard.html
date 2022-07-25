@@ -12,23 +12,41 @@
 <body>
     <div class="menu_bar">
         <h2>Game</h2>
-        <input type="button" id="new_game" name="new_game" value="New Game">
+        <a href="./game.html">
+            <input type="button" id="new_game" name="new_game" value="New Game">
+        </a>
         <input type="button" id="profile" name="profile" value="Profile">
         <input type="button" id="log_out" name="log_out" value="Log Out">
-
         <input type="button" id="admin" name="admin" value="Admin">
     </div>
 
-    <div class="newgame_card">
+    <!-- learn mode card -->
+    <div class="learn_game_card">
         <form>
             <div class="game_rules">
-                <h3>Review mode</h3>
+                <h3>Learn Mode</h3>
                 <br>
                 <p>Select the corresponding question for the card shown. Only one chance, and no skipping.</p><br>
                 <p>Points awards for correct answers, deducted for incorrect answers.</p><br>
                 <p>Faster players earn time bonus</p><br>
                 <input type="button" id="review_mode_button" name="review_mode_button" value="Start Game">
             </Div>
+        </form>
+    </div>
+
+    <!-- review mode card -->
+    <div class="review_game_card">
+        <form>
+            <div class="game_rules">
+                <h3>Review Mode</h3>
+                <br>
+                <p>Select the corresponding question for the card shown. Only one chance, and no skipping.</p><br>
+                <p>Points awards for correct answers, deducted for incorrect answers.</p><br>
+                <p>Faster players earn time bonus</p><br>
+                <a href="./game.html">
+                    <input type="button" id="review_mode_button" name="review_mode_button" value="Start Game">
+                </a>
+            </div>
         </form>
     </div>
     <footer>

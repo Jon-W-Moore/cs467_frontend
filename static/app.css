@@ -12,7 +12,7 @@ body {
 
 .title {
     color: white;
-    font-size: 64px;
+    font-size: 4vmax;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     text-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -25,19 +25,40 @@ img {
     max-height: 100%;
 }
 
+footer {
+    background-color: #343f3f;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    height: 20px;
+    margin-block-start: 0;
+}
 
-/************** login page ***************/
+
+/*****************************************************************************************/
+
+
+/*                                      LOGIN PAGE                                       */
+
+
+/*****************************************************************************************/
 
 .center_card {
     display: inline-block;
-    width: 500px;
-    height: 500px;
+    width: 25vmax;
+    height: 25vmax;
     background-color: #f4f4f4;
     border: 4px solid #343f3f;
     box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    border-radius: 1vmax;
     align-self: center;
-    margin-top: 75px
+    margin-top: 5vmax;
 }
 
 
@@ -54,8 +75,8 @@ input {
     /* margin: 10px; */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.2vmax;
+    line-height: 1.4vmax;
     color: #343f3f;
 }
 
@@ -63,17 +84,18 @@ input[type=text] {
     background: #FFFFFF;
     border: 2px solid #c4c4c4;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    width: 350px;
-    height: 50px;
-    text-indent: 15px;
+    border-radius: .75vmax;
+    width: 18vmax;
+    height: 3vmax;
+    text-indent: .75vmax;
+    margin: 1vmax;
 }
 
 ::placeholder {
-    font-family: SF Pro Display;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.2vmax;
+    line-height: 1.4vmax;
     color: #c4c4c4;
 }
 
@@ -85,9 +107,10 @@ input[type=submit] {
     color: white;
     border: 3px solid #343f3f;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    width: 359px;
-    height: 56px;
+    border-radius: .75vmax;
+    width: 18vmax;
+    height: 3vmax;
+    margin: 1vmax;
 }
 
 input[type=submit]:hover {
@@ -102,8 +125,8 @@ input[type=submit]:active {
 .reg_link {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.2vmax;
+    line-height: 1.4vmax;
     color: #343f3f;
     text-align: center;
 }
@@ -113,22 +136,13 @@ a {
 }
 
 
-/* footer */
+/*****************************************************************************************/
 
-footer {
-    background-color: #343f3f;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    line-height: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    margin: 0px;
-    height: 20px;
-    margin-block-start: 0;
-}
+
+/*                                       DASHBOARD                                       */
+
+
+/*****************************************************************************************/
 
 p {
     margin-block-start: 0;
@@ -137,7 +151,7 @@ p {
 .menu_bar {
     display: block;
     float: left;
-    width: 300px;
+    width: 16vw;
     height: 100vh;
     background-color: #f4f4f4;
     border-right: 4px solid #343f3f;
@@ -158,8 +172,12 @@ h2 {
 h2.center {
     margin-block-start: 0;
     margin-block-end: 0;
+<<<<<<< HEAD
+=======
+    padding: .8vw;
+>>>>>>> main
     text-align: left;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     text-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
@@ -172,9 +190,10 @@ input[type=button] {
     border: 4px solid #343f3f;
     box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 1vw;
-    width: 250px;
-    height: 50px;
+    width: 14vw;
+    height: 4vw;
     margin: .6vw;
+    font-size: 1.5vw;
 }
 
 input[type=button]:hover {
@@ -186,33 +205,45 @@ input[type=button]:active {
     transform: translateY(2px) translateX(-1px);
 }
 
-.newgame_card {
+.learn_game_card {
     display: inline-block;
-    width: 500px;
-    height: 700px;
+    width: 26vw;
+    height: 35vw;
+    background-color: #DDDCDC;
+    border: 4px solid #343f3f;
+    box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1vw;
+    margin-top: 4vw;
+    margin-inline: 5vw;
+}
+
+.review_game_card {
+    display: inline-block;
+    width: 26vw;
+    height: 35vw;
     background-color: #fbbd05bf;
     border: 4px solid #343f3f;
     box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
     border-radius: 1vw;
-    align-self: center;
-    margin-top: 75px;
+    margin-top: 4vw;
+    margin-inline: 5vw;
 }
 
 .game_rules {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.2vw;
+    line-height: 1.4vw;
     color: #343f3f;
     text-align: center;
-    margin-inline: 50px;
+    margin-inline: 1vw;
     ;
 }
 
 h3 {
     text-align: center;
-    font-size: 64px;
-    font-weight: 200;
+    font-size: 3vw;
+    font-weight: 300;
     margin-block-start: 0;
     margin-inline-end: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -222,7 +253,13 @@ h3 {
 }
 
 
-/********************** game page ***********************/
+/*****************************************************************************************/
+
+
+/*                                       GAME PAGE                                       */
+
+
+/*****************************************************************************************/
 
 .game_header {
     display: block;
@@ -296,6 +333,9 @@ input[type=button].game_button:active {
     border-radius: 1vw;
     text-align: center;
 }
+
+
+/*  TO BE REMOVED  */
 
 input[type=button].pause {
     float: left;
@@ -380,3 +420,12 @@ input[type=button].question_button {
 input[type=button].question_button:hover {
     background-color: #dfdfdf
 }
+
+
+/*****************************************************************************************/
+
+
+/*                                       PROFILE                                         */
+
+
+/*****************************************************************************************/
