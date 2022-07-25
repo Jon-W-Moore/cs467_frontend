@@ -1,3 +1,4 @@
+// Add event listener to start timer as soon as the page loads
 window.addEventListener("load", function () {
     const timer = document.getElementById("timer");
     let time = -1, intervalId;
@@ -13,12 +14,11 @@ window.addEventListener("load", function () {
     getData(intervalId)
 });
 
+// Function to fetch data from API
 async function getData(intervalId) {
     let url = "http://127.0.0.1:5000/"
-    let response = await fetch(`${url}/test1`);
+    let response = await fetch(`${url}/allquiz`);
     let data = await response.json()
-
-    console.log(data)
 
     document.body.dataset.current_question = 0
 
@@ -48,28 +48,53 @@ async function getData(intervalId) {
     }
 }
 
-function checkAnswer(e, questions, url, intervalId) {
-    let id = e.target.id.split("-")[1]
-    if (id === document.getElementById("card_image").dataset.answer_id) {
-        document.getElementById(`answer-${id}`).style.backgroundColor = 'green'
-        setTimeout(() => { document.getElementById(`answer-${id}`).style.backgroundColor = 'white'; }, 500);
+// Function to send data to API
+async function postData(url = '', data = {}) {
+    const response = await fetch(url, {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+}
 
-        // increase the score by ten points 
-        document.getElementById("score").innerHTML = parseInt(document.getElementById("score").innerHTML) + 10
-    } else {
-        document.getElementById(`answer-${id}`).style.backgroundColor = 'red'
-        setTimeout(() => { document.getElementById(`answer-${id}`).style.backgroundColor = 'white'; }, 500);
-    }
+// Function to check if answer is correct
+function checkAnswer(e, questions, url, intervalId) {
+    let answer_id = e.target.id.split("-")[1]
+    let question_id = document.getElementById("card_image").dataset.image_id
+    let currentScore = parseInt(document.getElementById("score").innerHTML)
+
+    postData(`${url}/answer`, { question_id: question_id, answer_id_by_user: answer_id, current_score: currentScore })
+        .then((response) => {
+            if (response.success) {
+                document.getElementById(`answer-${answer_id}`).style.backgroundColor = 'green'
+                setTimeout(() => { document.getElementById(`answer-${answer_id}`).style.backgroundColor = 'white'; }, 500);
+
+                document.getElementById("score").innerHTML = response.score
+
+            } else {
+                document.getElementById(`answer-${answer_id}`).style.backgroundColor = 'red'
+                setTimeout(() => { document.getElementById(`answer-${answer_id}`).style.backgroundColor = 'white'; }, 500);
+            }
+        });
 
     document.body.dataset.current_question++
     let currentQuestion = document.body.dataset.current_question
 
+    // if final question, stop timer
     if (questions.length === parseInt(currentQuestion)) {
         document.body.dataset.timer = clearInterval(intervalId);
     }
     setNextQuestion(currentQuestion, questions, url)
 }
 
+// Function to set next question
 function setNextQuestion(currentQuestion, questions, url) {
     let question = questions[currentQuestion]
     document.getElementById("card_image").src = `${url}/${question.image}`
