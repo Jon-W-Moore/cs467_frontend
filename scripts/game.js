@@ -16,8 +16,9 @@ window.addEventListener("load", function () {
 
 // Function to fetch data from API
 async function getData(intervalId) {
-    let url = "http://127.0.0.1:5000/"
+    let url = "http://127.0.0.1:5000"
     let response = await fetch(`${url}/allquiz`);
+
     let data = await response.json()
 
     document.body.dataset.current_question = 0
@@ -34,7 +35,7 @@ async function getData(intervalId) {
         setNextQuestion(nextQuestion, questions, url)
     }
     // load questions from server
-    let questionContainer = document.getElementById("question_container")
+    const questionContainer = document.getElementById("question_container")
     for (let i = 0; i < answers.length; i++) {
         let newEl = document.createElement("input")
         newEl.type = "button"
@@ -101,4 +102,22 @@ function setNextQuestion(currentQuestion, questions, url) {
     document.getElementById("card_image").dataset.image_id = ('image_id', question.id)
     document.getElementById("card_image").dataset.answer_id = ('image_id', question.answer_id)
     document.getElementById("question_number").innerText = `${parseInt(currentQuestion) + 1} out of ${questions.length}`
+    document.getElementById("hintText").innerText = question.hint.length === 0 ? "No extra info available. Give it your best guess!" : question.hint
+}
+
+// Handle opening and closing hint modal
+const modal = document.getElementById("hintModal");
+
+document.getElementById("info").onclick = function () {
+    modal.style.display = "block";
+}
+
+document.getElementById("closeHint").onclick = function () {
+    modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
