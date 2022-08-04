@@ -1,7 +1,9 @@
 // Add event listener to start timer as soon as the page loads
-window.addEventListener("load", function () {
+window.addEventListener("load", function() {
     const timer = document.getElementById("timer");
-    let time = -1, intervalId;
+    let time = -1,
+        intervalId;
+
     function incrementTime() {
         time++;
         let current_time = ("" + Math.trunc(time / 60)).slice(-2) + ":" + ("0" + (time % 60)).slice(-2)
@@ -29,18 +31,18 @@ async function getData(intervalId) {
     let current_question = document.body.dataset.current_question
     setNextQuestion(current_question, questions, url)
 
-    document.getElementById("skip").onclick = function () {
-        let nextQuestion = parseInt(document.body.dataset.current_question) + 1
-        document.body.dataset.current_question = nextQuestion
-        setNextQuestion(nextQuestion, questions, url)
-    }
-    // load questions from server
+    document.getElementById("pass").onclick = function() {
+            let nextQuestion = parseInt(document.body.dataset.current_question) + 1
+            document.body.dataset.current_question = nextQuestion
+            setNextQuestion(nextQuestion, questions, url)
+        }
+        // load questions from server
     const questionContainer = document.getElementById("question_container")
     for (let i = 0; i < answers.length; i++) {
         let newEl = document.createElement("input")
         newEl.type = "button"
         newEl.className = "question_button"
-        newEl.onclick = function (event) {
+        newEl.onclick = function(event) {
             checkAnswer(event, questions, url, intervalId)
         }
         newEl.value = answers[i]
@@ -86,7 +88,7 @@ function checkAnswer(e, questions, url, intervalId) {
         });
 
     document.body.dataset.current_question++
-    let currentQuestion = document.body.dataset.current_question
+        let currentQuestion = document.body.dataset.current_question
 
     // if final question, stop timer
     if (questions.length === parseInt(currentQuestion)) {
@@ -118,15 +120,15 @@ function setNextQuestion(currentQuestion, questions, url) {
 // Handle opening and closing hint modal
 const hintModal = document.getElementById("hintModal");
 
-document.getElementById("info").onclick = function () {
+document.getElementById("hint").onclick = function() {
     hintModal.style.display = "block";
 }
 
-document.getElementById("closeHint").onclick = function () {
+document.getElementById("closeHint").onclick = function() {
     hintModal.style.display = "none";
 }
 
-window.onclick = function (event) {
+window.onclick = function(event) {
     if (event.target == hintModal) {
         hintModal.style.display = "none";
     }
