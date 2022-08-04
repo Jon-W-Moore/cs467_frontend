@@ -91,6 +91,16 @@ function checkAnswer(e, questions, url, intervalId) {
     // if final question, stop timer
     if (questions.length === parseInt(currentQuestion)) {
         document.body.dataset.timer = clearInterval(intervalId);
+        // open end modal
+        document.getElementById("endModal").style.display = "block";
+        document.getElementById("endText").innerHTML = `
+            <h1>You finished in ${document.getElementById("timer").innerHTML} with a score of ${document.getElementById("score").innerHTML}</h1>
+            <br/>
+            <a href="./dashboard.html">
+                <input type="button" value="Return home">
+            </a>
+            <input type="button" onClick="window.location.reload();" value="Try again!">
+        `
     }
     setNextQuestion(currentQuestion, questions, url)
 }
@@ -106,18 +116,18 @@ function setNextQuestion(currentQuestion, questions, url) {
 }
 
 // Handle opening and closing hint modal
-const modal = document.getElementById("hintModal");
+const hintModal = document.getElementById("hintModal");
 
 document.getElementById("info").onclick = function () {
-    modal.style.display = "block";
+    hintModal.style.display = "block";
 }
 
 document.getElementById("closeHint").onclick = function () {
-    modal.style.display = "none";
+    hintModal.style.display = "none";
 }
 
 window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == hintModal) {
+        hintModal.style.display = "none";
     }
 }
