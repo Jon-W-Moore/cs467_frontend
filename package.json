@@ -4,7 +4,7 @@
     "description": "Repository for the front end of our web app.",
     "engines": {
         "node": "18.7.0"
-    }
+    },
     "main": "game.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
