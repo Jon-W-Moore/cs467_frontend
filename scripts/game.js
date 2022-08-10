@@ -1,5 +1,6 @@
+
 // Add event listener to start timer as soon as the page loads
-window.addEventListener("load", function () {
+function onLoad() {
     const timer = document.getElementById("timer");
     let time = -1,
         intervalId;
@@ -14,7 +15,7 @@ window.addEventListener("load", function () {
     intervalId = setInterval(incrementTime, 1000);
 
     getData(intervalId)
-});
+};
 
 // Function to fetch data from API
 async function getData(intervalId) {
@@ -122,7 +123,7 @@ function finished(intervalId) {
         <a href="./dashboard.html">
             <input type="button" value="Return home">
         </a>
-        <input type="button" onClick="window.location.reload();" value="Try again!">
+        <input type="button" onClick="location.reload();" value="Try again!">
     `
 }
 
@@ -135,10 +136,4 @@ document.getElementById("hint").onclick = function () {
 
 document.getElementById("closeHint").onclick = function () {
     hintModal.style.display = "none";
-}
-
-window.onclick = function (event) {
-    if (event.target == hintModal) {
-        hintModal.style.display = "none";
-    }
 }
