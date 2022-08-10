@@ -4,7 +4,8 @@
     "description": "Repository for the front end of our web app.",
     "main": "game.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node game.js"
     },
     "repository": {
         "type": "git",
