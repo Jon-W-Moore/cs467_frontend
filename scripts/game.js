@@ -18,7 +18,7 @@ window.addEventListener("load", function () {
 
 // Function to fetch data from API
 async function getData(intervalId) {
-    let url = "http://127.0.0.1:5000"
+    let url = "https://cs-467-game.herokuapp.com"
     let response = await fetch(`${url}/allquiz`);
 
     let data = await response.json()
